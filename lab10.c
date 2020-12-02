@@ -10,10 +10,8 @@ void textToBinary(char * theString, char * filename)
   fd = open(filename, O_CREAT|O_RDWR);
   result1 = write(fd, &len, sizeof(int));
   int result4 = read(fd, &integer, sizeof(int));
-  //printf("%d, %d\n", len, integer);
   result2 = write(fd, theString, (len)*sizeof(char));
   result3 = close(fd);
-  //printf("1: %d, 2: %d, 3: %d\n", result1, result2, result3);
   
 }
 
@@ -27,17 +25,12 @@ char * binaryToText(char * filename)
   system(fix);
   
   // Your code goes below
-  int fd, result1, result2, result3, len;
-  int * binstring = NULL;
+  int fd, result1, result2, len;
   char * string = NULL;
   fd = open(filename, O_RDONLY);
   result1 = read(fd, &len, sizeof(int));
-  //printf("%d, %d, %lu\n", len, len + 1, sizeof(char));
-  //binstring = (int *)calloc(len + 1, sizeof(int));
   string = (char *)calloc(len + 1, sizeof(char));
   result2 = read(fd, string, (len)*sizeof(char));
-  //string = (char *)binstring;
-  //printf("len: %d, strfd: %d, string: %s, strlen: %lu\n", len, result2, string, strlen(string));
   close(fd);
 
   return string;
@@ -79,28 +72,12 @@ char * cleanUp(char* theString)
 
 char * readFileName(char * type)
 {
-  char strtemp[100], *name = NULL, bin[] = ".bin", txt[] = ".txt";
-
-  if(strcmp(type, "Text to Binary") == 0)
-  {
-    printf("Enter a binary filename: ");
-    fgets(strtemp, 100, stdin);
-    stripCarriageReturn(strtemp);
-    name = (char *)calloc(strlen(strtemp) + 3, sizeof(char));
-    strcat(strtemp, bin);
-    strcpy(name, strtemp);
-  }
-
-  else
-  {
-    printf("Enter a text filename: ");
-    fgets(strtemp, 100, stdin);
-    stripCarriageReturn(strtemp);
-    name = (char *)calloc(strlen(strtemp) + 3, sizeof(char));
-    strcat(strtemp, bin);
-    strcpy(name, strtemp);
-
-  }
+  char strtemp[100], *name = NULL;
+  printf("%s\nfilename: ", type);
+  fgets(strtemp, 100, stdin);
+  stripCarriageReturn(strtemp);
+  name = (char *)calloc(strlen(strtemp) + 1, sizeof(char));
+  strcpy(name, strtemp);
   
   return name;
 }

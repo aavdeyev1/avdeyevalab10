@@ -1,0 +1,68 @@
+ clang-7 -pthread -lm -o main lab10.c main.c
+ ./main
+Text to Binary
+filename: file1.bin
+Enter a string: the quick brown fox
+Please choose from the following
+1) Convert Text to Binary
+2) Convert Binary back to Text
+3) Quit
+Choice --> 2
+Binary to Text
+filename: file1.bin
+fix chmod 777 file1.bin
+The original string was the quick brown fox
+Please choose from the following
+1) Convert Text to Binary
+2) Convert Binary back to Text
+3) Quit
+Choice --> 1
+Text to Binary
+filename: file2.bin
+Enter a string: hello hello hello 
+Please choose from the following
+1) Convert Text to Binary
+2) Convert Binary back to Text
+3) Quit
+Choice --> 2
+Binary to Text
+filename: file1.bin
+fix chmod 777 file1.bin
+The original string was the quick brown fox
+Please choose from the following
+1) Convert Text to Binary
+2) Convert Binary back to Text
+3) Quit
+Choice --> 2    
+Binary to Text
+filename: file2.bin
+fix chmod 777 file2.bin
+The original string was hello hello hello 
+Please choose from the following
+1) Convert Text to Binary
+2) Convert Binary back to Text
+3) Quit
+Choice --> 3
+Ending
+ 
+
+
+
+
+ clang-7 -pthread -lm -o main lab10.c main.c
+ ./main
+Text to Binary
+filename: abc.bin
+Enter a string: the quick brown fox
+Please choose from the following
+1) Convert Text to Binary
+2) Convert Binary back to Text
+3) Quit
+Choice --> 6
+Please choose from the following
+1) Convert Text to Binary
+2) Convert Binary back to Text
+3) Quit
+Choice --> 3
+Ending
+ 

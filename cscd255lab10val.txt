@@ -1,0 +1,56 @@
+ clang-7 -pthread -lm -o main lab10.c main.c
+ ./main
+Text to Binary
+filename: ^Cexited, interrupt
+ valgrind --leak-check=full ./main
+==164== Memcheck, a memory error detector
+==164== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==164== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==164== Command: ./main
+==164== 
+Text to Binary
+filename: file3.bin
+Enter a string: the third file
+Please choose from the following
+1) Convert Text to Binary
+2) Convert Binary back to Text
+3) Quit
+Choice --> 2
+Binary to Text
+filename: file3.bin
+fix chmod 777 file3.bin
+The original string was: the third file
+Please choose from the following
+1) Convert Text to Binary
+2) Convert Binary back to Text
+3) Quit
+Choice --> 1
+Text to Binary
+filename: file4.bin
+Enter a string: the fourth file
+Please choose from the following
+1) Convert Text to Binary
+2) Convert Binary back to Text
+3) Quit
+Choice --> 2
+Binary to Text
+filename: file4.bin
+fix chmod 777 file4.bin
+The original string was: the fourth file
+Please choose from the following
+1) Convert Text to Binary
+2) Convert Binary back to Text
+3) Quit
+Choice --> 3
+Ending
+==164== 
+==164== HEAP SUMMARY:
+==164==     in use at exit: 0 bytes in 0 blocks
+==164==   total heap usage: 10 allocs, 10 frees, 2,351 bytes allocated
+==164== 
+==164== All heap blocks were freed -- no leaks are possible
+==164== 
+==164== For counts of detected and suppressed errors, rerun with: -v
+==164== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ ^C
+ 

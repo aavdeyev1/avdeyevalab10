@@ -7,7 +7,7 @@ void textToBinary(char * theString, char * filename)
 {
   int fd, result1, result2, result3, len, i, integer;
   len = strlen(theString);
-  fd = open(filename, O_CREAT|O_RDWR);
+  fd = open(filename, O_CREAT|O_WRONLY);
   result1 = write(fd, &len, sizeof(int));
   int result4 = read(fd, &integer, sizeof(int));
   result2 = write(fd, theString, (len)*sizeof(char));

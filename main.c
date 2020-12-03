@@ -26,7 +26,7 @@ int main(void)
               filename = readFileName("Binary to Text"); 
               theString = cleanUp(theString);
               theString = binaryToText(filename);
-              printf("The original string was %s\n", theString);
+              printf("The original string was: %s\n", theString);
               break;
 
       case 3: printf("Ending\n");
